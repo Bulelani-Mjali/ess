@@ -25,12 +25,20 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/#">
-		    <asset:image src="grails.svg" alt="Grails Logo"/>
+		            <asset:image src="grails.svg" alt="Grails Logo"/>
                 </a>
             </div>
             <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
                 <ul class="nav navbar-nav navbar-right">
-                    <g:pageProperty name="page.nav" />
+                    <sec:ifLoggedIn>
+                        <li class="'dropdwn">
+                            <a hret="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome <sec:username/><span class="coret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Profile</a></li>
+                                <li>(<g:link controller='logout'>Logout</g:link>)</li>
+                            </ul>
+                        </li>
+                    </sec:ifLoggedIn>
                 </ul>
             </div>
         </div>

@@ -1,4 +1,4 @@
-package ess
+package expense.sheet.system
 
 class UrlMappings {
 
